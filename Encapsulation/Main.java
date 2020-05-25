@@ -13,8 +13,11 @@ public class Main {
         double width = scanner.nextDouble();
         double height = scanner.nextDouble();
 
-        Box box = new Box(length,width,height);
-
-        System.out.println(box);
+        try {
+            Box box = new Box(length, width, height);
+            System.out.println(box);
+        }catch (IllegalArgumentException e){
+            System.out.println(e.getMessage());
+        }
     }
 }
